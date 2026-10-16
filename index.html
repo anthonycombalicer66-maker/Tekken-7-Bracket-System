@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TEKKEN 7 Bracket</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="view">
+<header>
+<h1>TEKKEN <span>7</span></h1>
+<div class="sub">Double Elimination Tournament</div>
+</header>
+<nav class="tabs"><button id="tview">SEE BRACKET</button><button class="alt" id="tedit">EDIT BRACKET</button></nav>
+<main>
+<section class="panel" id="admin">
+<div class="bar">
+<input id="name" placeholder="Enter fighter name..." maxlength="24" autocomplete="off">
+<button id="add">ADD FIGHTER</button>
+<button class="alt" id="shuf">SHUFFLE</button>
+<button class="alt" id="undo">UNDO</button>
+<select id="ft" title="Match format"><option value="1">Single game</option><option value="2">First to 2 (Bo3)</option><option value="3">First to 3 (Bo5)</option><option value="4">First to 4 (Bo7)</option></select>
+<button class="alt" id="rst">RESET RESULTS</button>
+<button class="alt" id="clr">CLEAR ALL</button>
+<button class="alt" id="bulk">BULK ADD</button>
+<button class="alt" id="exp">COPY BRACKET</button>
+</div>
+<textarea id="bulkbox" placeholder="One fighter per line, then press BULK ADD again" style="display:none;width:100%;margin-top:10px;min-height:90px;background:#0c0c0f;border:1px solid var(--line);color:var(--text);padding:10px;font:inherit;font-size:17px"></textarea>
+<div class="chips" id="chips"></div>
+<div class="note" id="note">Add at least 2 fighters. Click a fighter in a match to advance them. Click the winner again to undo.</div>
+</section>
+<div id="out"></div>
+</main>
+<div id="modal" class="modal" hidden><div class="mbox"><div class="ml" id="mtitle"></div><input id="minput" maxlength="16" placeholder="e.g. Kazuya" autocomplete="off"><div class="bar" style="margin-top:12px"><button id="msave">SAVE</button><button class="alt" id="mclear">CLEAR</button><button class="alt" id="mcancel">CANCEL</button></div></div></div>
+<div id="pw" class="modal" hidden><div class="mbox"><div class="ml">ADMIN PASSWORD</div><input id="pwin" type="password" inputmode="numeric" placeholder="Enter password" autocomplete="off"><div class="note" id="pwerr" style="color:var(--red)"></div><div class="bar" style="margin-top:12px"><button id="pwok">UNLOCK</button><button class="alt" id="pwcancel">CANCEL</button></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
